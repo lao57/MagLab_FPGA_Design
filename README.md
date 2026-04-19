@@ -8,7 +8,12 @@ This projects has two main elements:
    --Status flag get/clear operations with per-command acknowledgment
    --Enable/disable control with confirmed acknowledgment handshaking
 
-      
+# Softcore Processor
+<img width="920" height="797" alt="SoftCoreProgdark" src="https://github.com/user-attachments/assets/b35c18ea-8d19-4bc6-9318-09d91a018f05" />
+
+# Processor FSM
+<img width="1047" height="1337" alt="SoftProcFSMfinal" src="https://github.com/user-attachments/assets/22b235f8-6fb8-471f-ab45-3f17e145bf59" />
+
 # Custom ISA Reference
 
 All instructions are 8-bit. Multi-byte instructions are sent sequentially.
@@ -251,3 +256,7 @@ print(f"Unique values : {len(np.unique(data))}")
 - Each block is prefixed with a 4-byte length header so TCP packet splitting never corrupts block boundaries
 - Stop the notebook cell with the **■ stop button** — this triggers a clean `KeyboardInterrupt` and closes the socket properly
 - The `Overlay()` and `allocate()` calls can live in a separate cell above so you don't reload the bitfile on every run
+
+
+
+<img width="1923" height="785" alt="Screenshot 2026-04-19 133142" src="https://github.com/user-attachments/assets/8dd207d0-69c6-4c01-8ca0-51e3659147ab" />
