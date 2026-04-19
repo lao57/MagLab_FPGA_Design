@@ -1,0 +1,12 @@
+
+{ 
+    crc :  4004366627589005058  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_22 -L processing_system7_vip_v1_0_24 -L axi_datamover_v5_1_37 -L axi_sg_v4_1_21 -L axi_dma_v7_1_37 -L proc_sys_reset_v5_0_17 -L smartconnect_v1_0 -L axi_register_slice_v2_1_36 -L axis_infrastructure_v1_1_1 -L axis_data_fifo_v2_0_17 -L xlconstant_v1_1_10 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot soft_core_tb_behav xil_defaultlib.soft_core_tb xil_defaultlib.glbl" , 
+    buildDate : "Nov 14 2025" , 
+    buildTime : "19:37:27" , 
+    linkCmd : "C:\\AMDDesignTools\\2025.2\\Vivado\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/soft_core_tb_behav/xsimk.exe\"   \"xsim.dir/soft_core_tb_behav/obj/xsim_0.win64.obj\" \"xsim.dir/soft_core_tb_behav/obj/xsim_1.win64.obj\" -L\"C:\\AMDDesignTools\\2025.2\\Vivado\\lib\\win64.o\" -lxv_simulator_kernel   -lxv_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

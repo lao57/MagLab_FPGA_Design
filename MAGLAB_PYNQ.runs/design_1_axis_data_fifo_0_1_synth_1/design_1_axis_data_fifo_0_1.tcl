@@ -57,8 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "design_1_axis_data_fifo_0_1_synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 2
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

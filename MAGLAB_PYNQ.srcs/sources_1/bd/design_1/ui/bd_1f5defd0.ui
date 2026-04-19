@@ -1,51 +1,66 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.789347",
-   "Default View_TopLeft":"-110,262",
+   "Default View_ScaleFactor":"1.11879",
+   "Default View_TopLeft":"612,0",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 7 -x 2100 -y 670 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 7 -x 2100 -y 700 -defaultsOSRD
-preplace port port-id_ADC_CLK -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
-preplace portBus rpio -pg 1 -lvl 0 -x 0 -y 500 -defaultsOSRD
-preplace inst FPGA_core_0 -pg 1 -lvl 2 -x 420 -y 530 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 6 -x 1850 -y 730 -defaultsOSRD
-preplace inst dma -pg 1 -lvl 4 -x 1190 -y 580 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 810 -y 790 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 420 -y 340 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 810 -y 560 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 120 -y 590 -defaultsOSRD
-preplace inst smartconnect_0 -pg 1 -lvl 5 -x 1510 -y 720 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 250 650 630 700 990 730 1380 800 1640 840 2060
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 240 240 NJ 240 NJ 240 NJ 240 NJ 240 2070
-preplace netloc rpio_1 1 0 2 NJ 500 220J
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 3 610 710 1000 740 NJ
-preplace netloc xlconstant_0_dout 1 1 2 230 640 620J
-preplace netloc axis_data_fifo_0_m_axis_tdata 1 3 1 N 530
-preplace netloc axis_data_fifo_0_m_axis_tkeep 1 3 1 N 550
-preplace netloc axis_data_fifo_0_m_axis_tlast 1 3 1 N 570
-preplace netloc dma_s_axis_s2mm_tready 1 3 1 N 590
-preplace netloc axis_data_fifo_0_m_axis_tvalid 1 3 1 N 610
-preplace netloc FPGA_core_0_m_axis_tdata 1 2 1 N 500
-preplace netloc FPGA_core_0_m_axis_tkeep 1 2 1 N 520
-preplace netloc FPGA_core_0_m_axis_tlast 1 2 1 N 540
-preplace netloc FPGA_core_0_m_axis_tvalid 1 2 1 590 560n
-preplace netloc axis_data_fifo_0_s_axis_tready 1 2 1 600 560n
-preplace netloc FPGA_core_0_m_axis 1 2 1 N 480
-preplace netloc axi_smc_M00_AXI 1 3 1 980 490n
-preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 N 510
-preplace netloc processing_system7_0_DDR 1 6 1 2080J 670n
-preplace netloc processing_system7_0_FIXED_IO 1 6 1 NJ 700
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 5 640 420 NJ 420 NJ 420 NJ 420 2060
-preplace netloc dma_M_AXI_S2MM 1 4 1 1380 560n
-preplace netloc smartconnect_0_M00_AXI 1 5 1 N 720
-levelinfo -pg 1 0 120 420 810 1190 1510 1850 2100
-pagesize -pg 1 -db -bbox -sgen -110 0 2210 880
+preplace port DDR -pg 1 -lvl 8 -x 2580 -y 920 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2580 -y 950 -defaultsOSRD
+preplace port port-id_ADC_CLK -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
+preplace port port-id_i_rx -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port port-id_o_tx -pg 1 -lvl 8 -x 2580 -y 650 -defaultsOSRD
+preplace port port-id_Hazard -pg 1 -lvl 8 -x 2580 -y 470 -defaultsOSRD
+preplace port port-id_On_LED -pg 1 -lvl 8 -x 2580 -y 500 -defaultsOSRD
+preplace portBus rpio -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace inst FPGA_core_0 -pg 1 -lvl 2 -x 410 -y 400 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2330 -y 980 -defaultsOSRD
+preplace inst dma -pg 1 -lvl 5 -x 1640 -y 970 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1170 -y 720 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 3 -x 770 -y 190 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 770 -y 440 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 130 -y 540 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 6 -x 1990 -y 970 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 1 -x 130 -y 440 -defaultsOSRD
+preplace inst uart_main_0 -pg 1 -lvl 4 -x 1170 -y 100 -defaultsOSRD
+preplace inst SoftProc_0 -pg 1 -lvl 5 -x 1640 -y 520 -defaultsOSRD
+preplace inst axis_broadcaster_0 -pg 1 -lvl 4 -x 1170 -y 510 -defaultsOSRD
+preplace netloc ADC_CLK_1 1 0 1 NJ 440
+preplace netloc FPGA_core_0_m_axis_tdata 1 2 1 N 380
+preplace netloc FPGA_core_0_m_axis_tkeep 1 2 1 N 400
+preplace netloc FPGA_core_0_m_axis_tlast 1 2 1 N 420
+preplace netloc SoftProc_0_Hazard 1 5 3 1860J 470 NJ 470 NJ
+preplace netloc SoftProc_0_i_tx_byte 1 3 3 970 10 NJ 10 1830
+preplace netloc SoftProc_0_i_tx_send 1 3 3 970 380 1400J 660 1840
+preplace netloc SoftProc_0_m_axis_tvalid 1 2 4 600 1120 NJ 1120 NJ 1120 1830
+preplace netloc axis_data_fifo_0_s_axis_tready 1 2 1 N 440
+preplace netloc i_rx_1 1 0 4 NJ 90 NJ 90 NJ 90 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 6 590 290 960 640 1410 1130 1850 1050 2120 1090 2540
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 6 600 300 940J 800 1450 820 NJ 820 NJ 820 2550
+preplace netloc rpio_1 1 0 2 NJ 380 NJ
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 3 3 950 820 1370 1140 1860J
+preplace netloc uart_main_0_o_rx_byte 1 4 1 1420 120n
+preplace netloc uart_main_0_o_rx_valid 1 4 1 1430 100n
+preplace netloc uart_main_0_o_tx 1 4 4 1440J 650 NJ 650 NJ 650 NJ
+preplace netloc util_ds_buf_0_BUFG_O 1 1 2 240 510 580J
+preplace netloc xlconstant_0_dout 1 1 2 250 500 570J
+preplace netloc SoftProc_0_On 1 5 3 NJ 500 NJ 500 NJ
+preplace netloc FPGA_core_0_m_axis 1 2 1 N 360
+preplace netloc axi_smc_M00_AXI 1 4 1 1380 720n
+preplace netloc dma_M_AXI_S2MM 1 5 1 N 950
+preplace netloc processing_system7_0_DDR 1 7 1 2560J 920n
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 950
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 5 970 810 NJ 810 NJ 810 NJ 810 2540
+preplace netloc smartconnect_0_M00_AXI 1 6 1 N 970
+preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 N 440
+preplace netloc axis_broadcaster_0_M00_AXIS 1 4 1 N 450
+preplace netloc axis_broadcaster_0_M01_AXIS 1 4 1 1390 570n
+levelinfo -pg 1 0 130 410 770 1170 1640 1990 2330 2580
+pagesize -pg 1 -db -bbox -sgen -110 0 2690 1150
 "
 }
 {
    "da_axi4_cnt":"3",
-   "da_clkrst_cnt":"1",
+   "da_clkrst_cnt":"2",
    "da_ps7_cnt":"1"
 }

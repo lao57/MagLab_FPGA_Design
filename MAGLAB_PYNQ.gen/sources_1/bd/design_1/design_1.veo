@@ -76,7 +76,11 @@ design_1 your_instance_name (
   .FIXED_IO_ps_clk(FIXED_IO_ps_clk), // inout wire FIXED_IO_ps_clk
   .FIXED_IO_ps_porb(FIXED_IO_ps_porb), // inout wire FIXED_IO_ps_porb
   .ADC_CLK(ADC_CLK), // input wire ADC_CLK
-  .rpio(rpio) // input wire [15:0] rpio
+  .rpio(rpio), // input wire [15:0] rpio
+  .i_rx(i_rx), // input wire i_rx
+  .o_tx(o_tx), // output wire o_tx
+  .Hazard(Hazard), // output wire Hazard
+  .On_LED(On_LED) // output wire On_LED
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

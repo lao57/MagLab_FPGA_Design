@@ -75,7 +75,11 @@ COMPONENT design_1
     FIXED_IO_ps_clk : INOUT STD_LOGIC;
     FIXED_IO_ps_porb : INOUT STD_LOGIC;
     ADC_CLK : IN STD_LOGIC;
-    rpio : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+    rpio : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    i_rx : IN STD_LOGIC;
+    o_tx : OUT STD_LOGIC;
+    Hazard : OUT STD_LOGIC;
+    On_LED : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -108,7 +112,11 @@ your_instance_name : design_1
     FIXED_IO_ps_clk => FIXED_IO_ps_clk,
     FIXED_IO_ps_porb => FIXED_IO_ps_porb,
     ADC_CLK => ADC_CLK,
-    rpio => rpio
+    rpio => rpio,
+    i_rx => i_rx,
+    o_tx => o_tx,
+    Hazard => Hazard,
+    On_LED => On_LED
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

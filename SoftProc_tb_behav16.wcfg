@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SoftProc_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SoftProc_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="573.302 ns"></ZoomStartTime>
+      <ZoomEndTime time="641.187 ns"></ZoomEndTime>
+      <Cursor1Time time="610.168 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="430"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="72" />
+   <wvobject fp_name="/SoftProc_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/o_rx_byte" type="array">
+      <obj_property name="ElementShortName">o_rx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rx_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/o_rx_valid" type="logic">
+      <obj_property name="ElementShortName">o_rx_valid</obj_property>
+      <obj_property name="ObjectShortName">o_rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/tdata" type="array">
+      <obj_property name="ElementShortName">tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tdata[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/tvalid" type="logic">
+      <obj_property name="ElementShortName">tvalid</obj_property>
+      <obj_property name="ObjectShortName">tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/Hazard" type="logic">
+      <obj_property name="ElementShortName">Hazard</obj_property>
+      <obj_property name="ObjectShortName">Hazard</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/i_tx_byte" type="array">
+      <obj_property name="ElementShortName">i_tx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_tx_byte[7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/i_tx_send" type="logic">
+      <obj_property name="ElementShortName">i_tx_send</obj_property>
+      <obj_property name="ObjectShortName">i_tx_send</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/m_axis_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/o_rx_byte" type="array">
+      <obj_property name="ElementShortName">o_rx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_rx_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/o_rx_valid" type="logic">
+      <obj_property name="ElementShortName">o_rx_valid</obj_property>
+      <obj_property name="ObjectShortName">o_rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/tdata" type="array">
+      <obj_property name="ElementShortName">tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tdata[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/tvalid" type="logic">
+      <obj_property name="ElementShortName">tvalid</obj_property>
+      <obj_property name="ObjectShortName">tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Hazard" type="logic">
+      <obj_property name="ElementShortName">Hazard</obj_property>
+      <obj_property name="ObjectShortName">Hazard</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/i_tx_byte" type="array">
+      <obj_property name="ElementShortName">i_tx_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_tx_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/i_tx_send" type="logic">
+      <obj_property name="ElementShortName">i_tx_send</obj_property>
+      <obj_property name="ObjectShortName">i_tx_send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/m_axis_tvalid" type="logic">
+      <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/valid_buff" type="logic">
+      <obj_property name="ElementShortName">valid_buff</obj_property>
+      <obj_property name="ObjectShortName">valid_buff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f0" type="logic">
+      <obj_property name="ElementShortName">f0</obj_property>
+      <obj_property name="ObjectShortName">f0</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f1" type="logic">
+      <obj_property name="ElementShortName">f1</obj_property>
+      <obj_property name="ObjectShortName">f1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f2" type="logic">
+      <obj_property name="ElementShortName">f2</obj_property>
+      <obj_property name="ObjectShortName">f2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f3" type="logic">
+      <obj_property name="ElementShortName">f3</obj_property>
+      <obj_property name="ObjectShortName">f3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f4" type="logic">
+      <obj_property name="ElementShortName">f4</obj_property>
+      <obj_property name="ObjectShortName">f4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f5" type="logic">
+      <obj_property name="ElementShortName">f5</obj_property>
+      <obj_property name="ObjectShortName">f5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f6" type="logic">
+      <obj_property name="ElementShortName">f6</obj_property>
+      <obj_property name="ObjectShortName">f6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/f7" type="logic">
+      <obj_property name="ElementShortName">f7</obj_property>
+      <obj_property name="ObjectShortName">f7</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/flagUp" type="logic">
+      <obj_property name="ElementShortName">flagUp</obj_property>
+      <obj_property name="ObjectShortName">flagUp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/SS_sig" type="logic">
+      <obj_property name="ElementShortName">SS_sig</obj_property>
+      <obj_property name="ObjectShortName">SS_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/SSFU" type="logic">
+      <obj_property name="ElementShortName">SSFU</obj_property>
+      <obj_property name="ObjectShortName">SSFU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/FU_sig" type="logic">
+      <obj_property name="ElementShortName">FU_sig</obj_property>
+      <obj_property name="ObjectShortName">FU_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/ThreshRes" type="logic">
+      <obj_property name="ElementShortName">ThreshRes</obj_property>
+      <obj_property name="ObjectShortName">ThreshRes</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Buff_sig" type="array">
+      <obj_property name="ElementShortName">Buff_sig[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Buff_sig[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Data" type="array">
+      <obj_property name="ElementShortName">Data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/flagVal" type="array">
+      <obj_property name="ElementShortName">flagVal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">flagVal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/MOut_sig" type="array">
+      <obj_property name="ElementShortName">MOut_sig[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MOut_sig[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/SendBack_byte" type="array">
+      <obj_property name="ElementShortName">SendBack_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SendBack_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/temp_thresh_q" type="array">
+      <obj_property name="ElementShortName">temp_thresh_q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp_thresh_q[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Inst" type="array">
+      <obj_property name="ElementShortName">Inst[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Inst[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/FlagNum" type="array">
+      <obj_property name="ElementShortName">FlagNum[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FlagNum[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/FlagNum_q" type="array">
+      <obj_property name="ElementShortName">FlagNum_q[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FlagNum_q[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/GLE" type="array">
+      <obj_property name="ElementShortName">GLE[1:0]</obj_property>
+      <obj_property name="ObjectShortName">GLE[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/GLE_q" type="array">
+      <obj_property name="ElementShortName">GLE_q[1:0]</obj_property>
+      <obj_property name="ObjectShortName">GLE_q[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q0" type="array">
+      <obj_property name="ElementShortName">comp_q0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q0[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q1" type="array">
+      <obj_property name="ElementShortName">comp_q1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q1[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q2" type="array">
+      <obj_property name="ElementShortName">comp_q2[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q2[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q3" type="array">
+      <obj_property name="ElementShortName">comp_q3[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q3[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q4" type="array">
+      <obj_property name="ElementShortName">comp_q4[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q4[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q5" type="array">
+      <obj_property name="ElementShortName">comp_q5[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q5[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q6" type="array">
+      <obj_property name="ElementShortName">comp_q6[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q6[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/comp_q7" type="array">
+      <obj_property name="ElementShortName">comp_q7[1:0]</obj_property>
+      <obj_property name="ObjectShortName">comp_q7[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q0" type="array">
+      <obj_property name="ElementShortName">Thr_q0[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q0[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q1" type="array">
+      <obj_property name="ElementShortName">Thr_q1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q2" type="array">
+      <obj_property name="ElementShortName">Thr_q2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q3" type="array">
+      <obj_property name="ElementShortName">Thr_q3[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q3[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q4" type="array">
+      <obj_property name="ElementShortName">Thr_q4[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q4[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q5" type="array">
+      <obj_property name="ElementShortName">Thr_q5[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q5[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q6" type="array">
+      <obj_property name="ElementShortName">Thr_q6[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q6[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thr_q7" type="array">
+      <obj_property name="ElementShortName">Thr_q7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Thr_q7[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/ADC_sig" type="array">
+      <obj_property name="ElementShortName">ADC_sig[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ADC_sig[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Buff_read_En" type="logic">
+      <obj_property name="ElementShortName">Buff_read_En</obj_property>
+      <obj_property name="ObjectShortName">Buff_read_En</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/GLE_En" type="logic">
+      <obj_property name="ElementShortName">GLE_En</obj_property>
+      <obj_property name="ObjectShortName">GLE_En</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/FNR_En" type="logic">
+      <obj_property name="ElementShortName">FNR_En</obj_property>
+      <obj_property name="ObjectShortName">FNR_En</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Thresh_En" type="logic">
+      <obj_property name="ElementShortName">Thresh_En</obj_property>
+      <obj_property name="ObjectShortName">Thresh_En</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/OnOff_sig" type="logic">
+      <obj_property name="ElementShortName">OnOff_sig</obj_property>
+      <obj_property name="ObjectShortName">OnOff_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/OnOff_en" type="logic">
+      <obj_property name="ElementShortName">OnOff_en</obj_property>
+      <obj_property name="ObjectShortName">OnOff_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/Send_sig" type="logic">
+      <obj_property name="ElementShortName">Send_sig</obj_property>
+      <obj_property name="ObjectShortName">Send_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/ThreshRes_sig" type="logic">
+      <obj_property name="ElementShortName">ThreshRes_sig</obj_property>
+      <obj_property name="ObjectShortName">ThreshRes_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SoftProc_tb/uut/OutSel" type="array">
+      <obj_property name="ElementShortName">OutSel[2:0]</obj_property>
+      <obj_property name="ObjectShortName">OutSel[2:0]</obj_property>
+   </wvobject>
+</wave_config>

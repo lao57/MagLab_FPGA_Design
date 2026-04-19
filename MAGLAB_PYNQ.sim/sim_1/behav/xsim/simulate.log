@@ -1,0 +1,40 @@
+Time resolution is 1 ps
+t=0 | rx_byte=00 valid=0 | tx_byte=00 tx_send=x | Hazard=0 DMA_valid=0
+t=5000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=0
+=== Sending ADC sample 0x1234 ===
+=== Sending test byte 0x01 -> On, should see 1 ===
+t=170000 | rx_byte=01 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=0
+t=180000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=0
+t=185000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=1 | Hazard=0 DMA_valid=0
+t=195000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== Sending test byte 0x04 -> Clear flags, should see 4===
+t=240000 | rx_byte=04 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=250000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=255000 | rx_byte=00 valid=0 | tx_byte=04 tx_send=1 | Hazard=0 DMA_valid=1
+t=265000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== Sending test byte 0x04 -> Add flag, f0 = GT(ADC) ===
+t=310000 | rx_byte=13 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=320000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== MSB of f0 ===
+t=380000 | rx_byte=12 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=390000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== LSB of f0 ===
+t=450000 | rx_byte=33 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=455000 | rx_byte=33 valid=1 | tx_byte=03 tx_send=1 | Hazard=0 DMA_valid=1
+t=460000 | rx_byte=00 valid=0 | tx_byte=03 tx_send=1 | Hazard=0 DMA_valid=1
+t=465000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== Sending test byte 0x05 -> get flag status, should see 0===
+t=520000 | rx_byte=05 valid=1 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=530000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+t=535000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=1 | Hazard=0 DMA_valid=1
+t=545000 | rx_byte=00 valid=0 | tx_byte=00 tx_send=0 | Hazard=0 DMA_valid=1
+=== Sending ADC sample 0x1234 ===
+t=605000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=0 | Hazard=1 DMA_valid=1
+t=615000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=1 | Hazard=1 DMA_valid=1
+t=625000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=0 | Hazard=1 DMA_valid=1
+=== Sending test byte 0x05 -> get flag status, should see 0===
+t=810000 | rx_byte=05 valid=1 | tx_byte=01 tx_send=0 | Hazard=1 DMA_valid=1
+t=820000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=0 | Hazard=1 DMA_valid=1
+t=825000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=1 | Hazard=1 DMA_valid=1
+t=835000 | rx_byte=00 valid=0 | tx_byte=01 tx_send=0 | Hazard=1 DMA_valid=1
+=== Done - simulation running, close manually ===

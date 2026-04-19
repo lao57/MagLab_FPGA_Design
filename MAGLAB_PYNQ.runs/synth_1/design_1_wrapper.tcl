@@ -57,8 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 2
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -103,6 +102,9 @@ set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/S
 set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_9/bd_48ac_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_util_ds_buf_0_0/design_1_util_ds_buf_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/ip/design_1_axis_broadcaster_0_0/design_1_axis_broadcaster_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -114,8 +116,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/pynq-z2/PYNQ-Z2 v1.0.xdc}}
-set_property used_in_implementation false [get_files {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/pynq-z2/PYNQ-Z2 v1.0.xdc}}]
+read_xdc {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/constrs_1/imports/pynq-z2/PYNQ-Z2 v1.0.xdc}}
+set_property used_in_implementation false [get_files {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/constrs_1/imports/pynq-z2/PYNQ-Z2 v1.0.xdc}}]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

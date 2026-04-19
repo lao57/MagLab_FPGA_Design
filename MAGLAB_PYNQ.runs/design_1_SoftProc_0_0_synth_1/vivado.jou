@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Apr 19 11:37:13 2026
+# Process ID         : 37072
+# Current directory  : C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.runs/design_1_SoftProc_0_0_synth_1
+# Command line       : vivado.exe -log design_1_SoftProc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_SoftProc_0_0.tcl
+# Log file           : C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.runs/design_1_SoftProc_0_0_synth_1/design_1_SoftProc_0_0.vds
+# Journal file       : C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.runs/design_1_SoftProc_0_0_synth_1\vivado.jou
+# Running On         : DESKTOP-J6HVFTT
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra X7 358H
+# CPU Frequency      : 3686 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 33898 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36046 MB
+# Available Virtual  : 9493 MB
+#-----------------------------------------------------------
+source design_1_SoftProc_0_0.tcl -notrace

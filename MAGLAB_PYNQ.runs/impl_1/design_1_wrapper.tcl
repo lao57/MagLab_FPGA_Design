@@ -106,9 +106,9 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param general.usePosixSpawnForFork 1
-  set_param chipscope.maxJobs 2
-  set_param bd.open.in_stealth_mode 1
-  set_param runs.launchOptions { -jobs 4  }
+  set_param chipscope.maxJobs 4
+  set_param bd.open.in_stealth_mode 2
+  set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
   set_property design_mode GateLvl [current_fileset]
@@ -128,7 +128,7 @@ OPTRACE "add files" START { }
   add_files C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/pynq-z2/PYNQ-Z2 v1.0.xdc}}
+  read_xdc {{C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/constrs_1/imports/pynq-z2/PYNQ-Z2 v1.0.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

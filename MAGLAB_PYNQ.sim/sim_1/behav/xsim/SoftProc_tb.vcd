@@ -1,0 +1,1813 @@
+$date
+   Wed Apr 15 12:46:47 2026
+$end
+
+$version
+  2025.2
+  $dumpfile ("SoftProc_tb.vcd") 
+$end
+
+$timescale
+  1ps
+$end
+
+$scope module SoftProc_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " rst_n $end
+$var reg 8 # o_rx_byte [7:0] $end
+$var reg 1 $ o_rx_valid $end
+$var reg 16 % tdata [15:0] $end
+$var reg 1 & tvalid $end
+$var wire 1 ' Hazard $end
+$var wire 8 ( i_tx_byte [7:0] $end
+$var wire 1 ) i_tx_send $end
+$var wire 1 * m_axis_tvalid $end
+$scope module uut $end
+$var wire 1 + clk $end
+$var wire 1 , rst_n $end
+$var wire 8 - o_rx_byte [7:0] $end
+$var wire 1 . o_rx_valid $end
+$var wire 16 / tdata [15:0] $end
+$var wire 1 0 tvalid $end
+$var wire 1 ' Hazard $end
+$var wire 8 ( i_tx_byte [7:0] $end
+$var wire 1 ) i_tx_send $end
+$var wire 1 * m_axis_tvalid $end
+$var wire 1 1 valid_buff $end
+$var wire 1 2 f0 $end
+$var wire 1 3 f1 $end
+$var wire 1 4 f2 $end
+$var wire 1 5 f3 $end
+$var wire 1 6 f4 $end
+$var wire 1 7 f5 $end
+$var wire 1 8 f6 $end
+$var wire 1 9 f7 $end
+$var wire 1 : flagUp $end
+$var wire 1 ; SS_sig $end
+$var wire 1 < SSFU $end
+$var wire 1 = FU_sig $end
+$var wire 1 > rst $end
+$var wire 1 ? ThreshRes $end
+$var wire 8 @ Buff_sig [7:0] $end
+$var wire 8 A Data [7:0] $end
+$var wire 8 B flagVal [7:0] $end
+$var wire 8 C MOut_sig [7:0] $end
+$var wire 8 D SendBack_byte [7:0] $end
+$var wire 8 E temp_thresh_q [7:0] $end
+$var wire 3 F Inst [2:0] $end
+$var wire 3 G FlagNum [2:0] $end
+$var wire 3 H FlagNum_q [2:0] $end
+$var wire 2 I GLE [1:0] $end
+$var wire 2 J GLE_q [1:0] $end
+$var wire 2 K comp_q0 [1:0] $end
+$var wire 2 L comp_q1 [1:0] $end
+$var wire 2 M comp_q2 [1:0] $end
+$var wire 2 N comp_q3 [1:0] $end
+$var wire 2 O comp_q4 [1:0] $end
+$var wire 2 P comp_q5 [1:0] $end
+$var wire 2 Q comp_q6 [1:0] $end
+$var wire 2 R comp_q7 [1:0] $end
+$var wire 16 S Thr_q0 [15:0] $end
+$var wire 16 T Thr_q1 [15:0] $end
+$var wire 16 U Thr_q2 [15:0] $end
+$var wire 16 V Thr_q3 [15:0] $end
+$var wire 16 W Thr_q4 [15:0] $end
+$var wire 16 X Thr_q5 [15:0] $end
+$var wire 16 Y Thr_q6 [15:0] $end
+$var wire 16 Z Thr_q7 [15:0] $end
+$var wire 16 [ ADC_sig [15:0] $end
+$var wire 1 \ Buff_read_En $end
+$var wire 1 ] GLE_En $end
+$var wire 1 ^ FNR_En $end
+$var wire 1 _ Thresh_En $end
+$var wire 1 ` OnOff_sig $end
+$var wire 1 a OnOff_en $end
+$var wire 1 b Send_sig $end
+$var wire 1 c ThreshRes_sig $end
+$var wire 3 d OutSel [2:0] $end
+$scope module Buffer $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 . wr_en $end
+$var wire 1 \ rd_en $end
+$var wire 8 - din [7:0] $end
+$var wire 8 @ dout [7:0] $end
+$var wire 1 e full $end
+$var wire 1 f empty $end
+$var wire 1 1 valid $end
+$var reg 3 g count [2:0] $end
+$var integer 32 h i [31:0] $end
+$upscope $end
+$scope module GLE_Reg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 ] en $end
+$var wire 2 I d [1:0] $end
+$var reg 2 i q [1:0] $end
+$upscope $end
+$scope module FlagNum_Reg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 ^ en $end
+$var wire 3 G d [2:0] $end
+$var reg 3 j q [2:0] $end
+$upscope $end
+$scope module TempThresh_Reg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 1 en $end
+$var wire 8 A d [7:0] $end
+$var reg 8 k q [7:0] $end
+$upscope $end
+$scope module Thresh_Reg $end
+$var wire 1 + clk $end
+$var wire 1 ? rst $end
+$var wire 1 _ en $end
+$var wire 3 H write_sel [2:0] $end
+$var wire 16 l d [15:0] $end
+$var wire 16 S q0 [15:0] $end
+$var wire 16 T q1 [15:0] $end
+$var wire 16 U q2 [15:0] $end
+$var wire 16 V q3 [15:0] $end
+$var wire 16 W q4 [15:0] $end
+$var wire 16 X q5 [15:0] $end
+$var wire 16 Y q6 [15:0] $end
+$var wire 16 Z q7 [15:0] $end
+$var integer 32 m i [31:0] $end
+$upscope $end
+$scope module Comps_Reg $end
+$var wire 1 + clk $end
+$var wire 1 ? rst $end
+$var wire 1 _ en $end
+$var wire 3 H write_sel [2:0] $end
+$var wire 2 J d [1:0] $end
+$var wire 2 K q0 [1:0] $end
+$var wire 2 L q1 [1:0] $end
+$var wire 2 M q2 [1:0] $end
+$var wire 2 N q3 [1:0] $end
+$var wire 2 O q4 [1:0] $end
+$var wire 2 P q5 [1:0] $end
+$var wire 2 Q q6 [1:0] $end
+$var wire 2 R q7 [1:0] $end
+$var integer 32 n i [31:0] $end
+$upscope $end
+$scope module GLE_Comp_0 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 S Thresh [15:0] $end
+$var wire 2 K GLEop [1:0] $end
+$var wire 1 2 GLE_flag $end
+$var wire 1 o GT $end
+$var wire 1 p LT $end
+$var wire 1 q EQ $end
+$var wire 1 r MUXout $end
+$scope module u_mux $end
+$var wire 1 o d1 [0:0] $end
+$var wire 1 p d2 [0:0] $end
+$var wire 1 q d3 [0:0] $end
+$var wire 2 K sel [1:0] $end
+$var reg 1 s y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_1 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 T Thresh [15:0] $end
+$var wire 2 L GLEop [1:0] $end
+$var wire 1 3 GLE_flag $end
+$var wire 1 t GT $end
+$var wire 1 u LT $end
+$var wire 1 v EQ $end
+$var wire 1 w MUXout $end
+$scope module u_mux $end
+$var wire 1 t d1 [0:0] $end
+$var wire 1 u d2 [0:0] $end
+$var wire 1 v d3 [0:0] $end
+$var wire 2 L sel [1:0] $end
+$var reg 1 x y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_2 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 U Thresh [15:0] $end
+$var wire 2 M GLEop [1:0] $end
+$var wire 1 4 GLE_flag $end
+$var wire 1 y GT $end
+$var wire 1 z LT $end
+$var wire 1 { EQ $end
+$var wire 1 | MUXout $end
+$scope module u_mux $end
+$var wire 1 y d1 [0:0] $end
+$var wire 1 z d2 [0:0] $end
+$var wire 1 { d3 [0:0] $end
+$var wire 2 M sel [1:0] $end
+$var reg 1 } y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_3 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 V Thresh [15:0] $end
+$var wire 2 N GLEop [1:0] $end
+$var wire 1 5 GLE_flag $end
+$var wire 1 ~ GT $end
+$var wire 1 !! LT $end
+$var wire 1 "! EQ $end
+$var wire 1 #! MUXout $end
+$scope module u_mux $end
+$var wire 1 ~ d1 [0:0] $end
+$var wire 1 !! d2 [0:0] $end
+$var wire 1 "! d3 [0:0] $end
+$var wire 2 N sel [1:0] $end
+$var reg 1 $! y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_4 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 W Thresh [15:0] $end
+$var wire 2 O GLEop [1:0] $end
+$var wire 1 6 GLE_flag $end
+$var wire 1 %! GT $end
+$var wire 1 &! LT $end
+$var wire 1 '! EQ $end
+$var wire 1 (! MUXout $end
+$scope module u_mux $end
+$var wire 1 %! d1 [0:0] $end
+$var wire 1 &! d2 [0:0] $end
+$var wire 1 '! d3 [0:0] $end
+$var wire 2 O sel [1:0] $end
+$var reg 1 )! y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_5 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 X Thresh [15:0] $end
+$var wire 2 P GLEop [1:0] $end
+$var wire 1 7 GLE_flag $end
+$var wire 1 *! GT $end
+$var wire 1 +! LT $end
+$var wire 1 ,! EQ $end
+$var wire 1 -! MUXout $end
+$scope module u_mux $end
+$var wire 1 *! d1 [0:0] $end
+$var wire 1 +! d2 [0:0] $end
+$var wire 1 ,! d3 [0:0] $end
+$var wire 2 P sel [1:0] $end
+$var reg 1 .! y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_6 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 Y Thresh [15:0] $end
+$var wire 2 Q GLEop [1:0] $end
+$var wire 1 8 GLE_flag $end
+$var wire 1 /! GT $end
+$var wire 1 0! LT $end
+$var wire 1 1! EQ $end
+$var wire 1 2! MUXout $end
+$scope module u_mux $end
+$var wire 1 /! d1 [0:0] $end
+$var wire 1 0! d2 [0:0] $end
+$var wire 1 1! d3 [0:0] $end
+$var wire 2 Q sel [1:0] $end
+$var reg 1 3! y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module GLE_Comp_7 $end
+$var wire 16 [ ADCin [15:0] $end
+$var wire 16 Z Thresh [15:0] $end
+$var wire 2 R GLEop [1:0] $end
+$var wire 1 9 GLE_flag $end
+$var wire 1 4! GT $end
+$var wire 1 5! LT $end
+$var wire 1 6! EQ $end
+$var wire 1 7! MUXout $end
+$scope module u_mux $end
+$var wire 1 4! d1 [0:0] $end
+$var wire 1 5! d2 [0:0] $end
+$var wire 1 6! d3 [0:0] $end
+$var wire 2 R sel [1:0] $end
+$var reg 1 8! y [0:0] $end
+$upscope $end
+$upscope $end
+$scope module flagReg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 9! en $end
+$var wire 8 :! d [7:0] $end
+$var reg 8 ;! q [7:0] $end
+$upscope $end
+$scope module ADCin_Reg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 0 en $end
+$var wire 16 / d [15:0] $end
+$var reg 16 <! q [15:0] $end
+$upscope $end
+$scope module OnOff_reg $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 a en $end
+$var wire 1 ` d [0:0] $end
+$var reg 1 =! q [0:0] $end
+$upscope $end
+$scope module flagUpdate $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 8 B d [7:0] $end
+$var reg 8 >! q [7:0] $end
+$var wire 1 : changed $end
+$var reg 8 ?! prev [7:0] $end
+$upscope $end
+$scope module FU $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 @! en $end
+$var wire 1 : d [0:0] $end
+$var reg 1 A! q [0:0] $end
+$upscope $end
+$scope module SS $end
+$var wire 1 + clk $end
+$var wire 1 > rst $end
+$var wire 1 B! en $end
+$var wire 1 b d [0:0] $end
+$var reg 1 C! q [0:0] $end
+$upscope $end
+$scope module MOut $end
+$var wire 8 B A [7:0] $end
+$var wire 8 D B [7:0] $end
+$var wire 1 b sel $end
+$var wire 8 C Y [7:0] $end
+$upscope $end
+$scope module SendBack_0 $end
+$var wire 3 d OutSel [2:0] $end
+$var wire 8 B flagVals [7:0] $end
+$var reg 8 D! SendBack_q [7:0] $end
+$upscope $end
+$scope module u_fsm $end
+$var wire 1 + clk $end
+$var wire 1 , rst_n $end
+$var wire 3 F inst [2:0] $end
+$var wire 1 1 valid_buff $end
+$var reg 1 E! Buff_read_En $end
+$var reg 1 F! GLE_En $end
+$var reg 1 G! FNR_En $end
+$var reg 1 H! ThreshRes $end
+$var reg 1 I! Thresh_En $end
+$var reg 1 J! OnOff_sig $end
+$var reg 1 K! OnOff_en $end
+$var reg 1 L! Send_sig $end
+$var reg 3 M! OutSel [2:0] $end
+$var reg 3 N! state [2:0] $end
+$var reg 3 O! next_state [2:0] $end
+$upscope $end
+$upscope $end
+$scope task send_byte $end
+$var reg 8 P! byte_val [7:0] $end
+$upscope $end
+$scope task send_adc $end
+$var reg 16 Q! adc_val [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+
+#0
+$dumpvars
+0!
+0!!
+0"
+1"!
+b0 #
+0#!
+0$
+0$!
+b0 %
+0%!
+0&
+0&!
+0'
+1'!
+b0 (
+0(!
+x)
+0)!
+0*
+0*!
+0+
+0+!
+0,
+1,!
+b0 -
+0-!
+0.
+0.!
+b0 /
+0/!
+00
+00!
+x1
+11!
+02
+02!
+03
+03!
+04
+04!
+05
+05!
+06
+16!
+07
+07!
+08
+08!
+09
+19!
+x:
+b0 :!
+0;
+b0 ;!
+0<
+b0 <!
+0=
+0=!
+1>
+bx >!
+1?
+bx ?!
+bx @
+1@!
+bx A
+0A!
+b0 B
+1B!
+b0 C
+0C!
+b1 D
+b1 D!
+b0 E
+1E!
+bx F
+1F!
+bx G
+1G!
+b0 H
+0H!
+bx I
+0I!
+b0 J
+0J!
+b0 K
+0K!
+b0 L
+0L!
+b0 M
+b0 M!
+b0 N
+b0 N!
+b0 O
+b0 O!
+b0 P
+bx P!
+b0 Q
+bx Q!
+b0 R
+b0 S
+b0 T
+b0 U
+b0 V
+b0 W
+b0 X
+b0 Y
+b0 Z
+b0 [
+1\
+1]
+1^
+0_
+0`
+0a
+0b
+0c
+b0 d
+xe
+xf
+bx g
+bx h
+b0 i
+b0 j
+b0 k
+b0xxxxxxxx l
+b1000 m
+b1000 n
+0o
+0p
+1q
+0r
+0s
+0t
+0u
+1v
+0w
+0x
+0y
+0z
+1{
+0|
+0}
+0~
+$end
+
+#5000
+1!
+0)
+1+
+01
+0:
+b0 >!
+b0 ?!
+b0 @
+b0 A
+1E!
+b0 F
+1F!
+b0 G
+1G!
+b0 I
+0e
+1f
+b0 g
+b0 l
+b1000 m
+b1000 n
+
+#10000
+0!
+0+
+
+#15000
+1!
+1+
+b1000 m
+b1000 n
+
+#20000
+0!
+0+
+
+#25000
+1!
+1+
+b1000 m
+b1000 n
+
+#30000
+0!
+0+
+
+#35000
+1!
+1+
+b1000 m
+b1000 n
+
+#40000
+0!
+0+
+
+#45000
+1!
+1+
+b1000 m
+b1000 n
+
+#50000
+0!
+1"
+0+
+1,
+0>
+0?
+
+#55000
+1!
+1+
+
+#60000
+0!
+0+
+
+#65000
+1!
+1+
+
+#70000
+0!
+0+
+b0 Q!
+
+#75000
+1!
+1+
+
+#80000
+0!
+1&
+0+
+10
+
+#85000
+1!
+1+
+
+#90000
+0!
+0&
+0+
+00
+
+#95000
+1!
+1+
+
+#100000
+0!
+0+
+
+#105000
+1!
+1+
+
+#110000
+0!
+0+
+
+#115000
+1!
+1+
+
+#120000
+0!
+0+
+
+#125000
+1!
+1+
+
+#130000
+0!
+0+
+
+#135000
+1!
+1+
+
+#140000
+0!
+0+
+b1001000110100 Q!
+
+#145000
+1!
+1+
+
+#150000
+0!
+b1001000110100 %
+1&
+0+
+b1001000110100 /
+10
+
+#155000
+1!
+0"!
+1%!
+0'!
+1*!
+1+
+0,!
+1/!
+01!
+14!
+06!
+b1001000110100 <!
+b1001000110100 [
+1o
+0q
+1t
+0v
+1y
+0{
+1~
+
+#160000
+0!
+0&
+0+
+00
+b1 P!
+
+#165000
+1!
+1+
+
+#170000
+0!
+b1 #
+1$
+0+
+b1 -
+1.
+
+#175000
+1!
+1+
+11
+b1 @
+b1 A
+1E!
+b1 F
+1F!
+1G!
+b1 O!
+0f
+b1 g
+b1 l
+
+#180000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#185000
+1!
+b1 (
+1)
+1+
+01
+b0 @
+b0 A
+b1 C
+b1 E
+0E!
+b0 F
+0F!
+0G!
+1J!
+1K!
+1L!
+b1 N!
+b0 O!
+0\
+0]
+0^
+1`
+1a
+1b
+1f
+b0 g
+b1 k
+b100000000 l
+
+#190000
+0!
+0+
+
+#195000
+1!
+b0 (
+0)
+1*
+1+
+1;
+1=!
+b0 C
+1C!
+1E!
+1F!
+1G!
+0J!
+0K!
+0L!
+b0 N!
+1\
+1]
+1^
+0`
+0a
+0b
+
+#200000
+0!
+0+
+
+#205000
+1!
+1+
+0;
+0C!
+
+#210000
+0!
+0+
+
+#215000
+1!
+1+
+
+#220000
+0!
+0+
+
+#225000
+1!
+1+
+
+#230000
+0!
+0+
+b100 P!
+
+#235000
+1!
+1+
+
+#240000
+0!
+b100 #
+1$
+0+
+b100 -
+1.
+
+#245000
+1!
+1+
+11
+b100 @
+b100 A
+1E!
+b100 F
+1F!
+1G!
+b101 O!
+0f
+b1 g
+b100000100 l
+
+#250000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#255000
+1!
+b100 (
+1)
+1+
+01
+1?
+b0 @
+b0 A
+b100 C
+b100 D
+b100 D!
+b100 E
+0E!
+b0 F
+0F!
+0G!
+1H!
+1L!
+b11 M!
+b101 N!
+b0 O!
+0\
+0]
+0^
+1b
+1c
+b11 d
+1f
+b0 g
+b100 k
+b10000000000 l
+
+#260000
+0!
+0+
+
+#265000
+1!
+b0 (
+0)
+1+
+1;
+0?
+b0 C
+1C!
+b1 D
+b1 D!
+1E!
+1F!
+1G!
+0H!
+0L!
+b0 M!
+b0 N!
+1\
+1]
+1^
+0b
+0c
+b0 d
+b1000 m
+b1000 n
+
+#270000
+0!
+0+
+
+#275000
+1!
+1+
+0;
+0C!
+
+#280000
+0!
+0+
+
+#285000
+1!
+1+
+
+#290000
+0!
+0+
+
+#295000
+1!
+1+
+
+#300000
+0!
+0+
+b10011 P!
+
+#305000
+1!
+1+
+
+#310000
+0!
+b10011 #
+1$
+0+
+b10011 -
+1.
+
+#315000
+1!
+1+
+11
+b10011 @
+b10011 A
+1E!
+b11 F
+1F!
+1G!
+b10 I
+b11 O!
+0f
+b1 g
+b10000010011 l
+
+#320000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#325000
+1!
+1+
+01
+b0 @
+b0 A
+b10011 E
+1E!
+b0 F
+0F!
+0G!
+b0 I
+b10 J
+b11 N!
+0]
+0^
+1f
+b0 g
+b10 i
+b10011 k
+b1001100000000 l
+
+#330000
+0!
+0+
+
+#335000
+1!
+1+
+
+#340000
+0!
+0+
+
+#345000
+1!
+1+
+
+#350000
+0!
+0+
+
+#355000
+1!
+1+
+
+#360000
+0!
+0+
+
+#365000
+1!
+1+
+
+#370000
+0!
+0+
+b10010 P!
+
+#375000
+1!
+1+
+
+#380000
+0!
+b10010 #
+1$
+0+
+b10010 -
+1.
+
+#385000
+1!
+1+
+11
+b10010 @
+b10010 A
+1E!
+b10 F
+b10 I
+b100 O!
+0f
+b1 g
+b1001100010010 l
+
+#390000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#395000
+1!
+1+
+01
+b0 @
+b0 A
+b11 D
+b11 D!
+b10010 E
+1E!
+b0 F
+b0 I
+1I!
+1J!
+b10 M!
+b100 N!
+1_
+1`
+b10 d
+1f
+b0 g
+b10010 k
+b1001000000000 l
+
+#400000
+0!
+0+
+
+#405000
+1!
+1+
+b10 K
+b1001000000000 S
+
+#410000
+0!
+0+
+
+#415000
+1!
+1+
+
+#420000
+0!
+0+
+
+#425000
+1!
+1+
+
+#430000
+0!
+0+
+
+#435000
+1!
+1+
+
+#440000
+0!
+0+
+b110011 P!
+
+#445000
+1!
+1+
+
+#450000
+0!
+b110011 #
+1$
+0+
+b110011 -
+1.
+
+#455000
+1!
+b11 (
+1)
+1+
+11
+b110011 @
+b110011 A
+b11 C
+1E!
+b11 F
+b1 G
+b10 I
+1I!
+1J!
+1L!
+b10 M!
+b0 O!
+1b
+0f
+b1 g
+b1001000110011 l
+
+#460000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#465000
+1!
+b0 (
+0)
+1+
+01
+1;
+b0 @
+b0 A
+b0 C
+1C!
+b1 D
+b1 D!
+b110011 E
+1E!
+b0 F
+1F!
+b0 G
+1G!
+b0 I
+0I!
+0J!
+0L!
+b0 M!
+b0 N!
+b1001000110011 S
+1]
+1^
+0_
+0`
+0b
+b0 d
+1f
+b0 g
+b110011 k
+b11001100000000 l
+
+#470000
+0!
+0+
+
+#475000
+1!
+1+
+0;
+0C!
+b0 J
+b0 i
+
+#480000
+0!
+0+
+
+#485000
+1!
+1+
+
+#490000
+0!
+0+
+
+#495000
+1!
+1+
+
+#500000
+0!
+0+
+
+#505000
+1!
+1+
+
+#510000
+0!
+0+
+b101 P!
+
+#515000
+1!
+1+
+
+#520000
+0!
+b101 #
+1$
+0+
+b101 -
+1.
+
+#525000
+1!
+1+
+11
+b101 @
+b101 A
+1E!
+b101 F
+1F!
+1G!
+b110 O!
+0f
+b1 g
+b11001100000101 l
+
+#530000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#535000
+1!
+b0 (
+1)
+1+
+01
+b0 @
+b0 A
+b0 C
+b0 D
+b0 D!
+b101 E
+0E!
+b0 F
+0F!
+0G!
+1L!
+b100 M!
+b110 N!
+b0 O!
+0\
+0]
+0^
+1b
+b100 d
+1f
+b0 g
+b101 k
+b10100000000 l
+
+#540000
+0!
+0+
+
+#545000
+1!
+0)
+1+
+1;
+1C!
+b1 D
+b1 D!
+1E!
+1F!
+1G!
+0L!
+b0 M!
+b0 N!
+1\
+1]
+1^
+0b
+b0 d
+
+#550000
+0!
+0+
+
+#555000
+1!
+1+
+0;
+0C!
+
+#560000
+0!
+0+
+
+#565000
+1!
+1+
+
+#570000
+0!
+0+
+
+#575000
+1!
+1+
+
+#580000
+0!
+0+
+b1001000110010 Q!
+
+#585000
+1!
+1+
+
+#590000
+0!
+b1001000110010 %
+1&
+0+
+b1001000110010 /
+10
+
+#595000
+1!
+1+
+12
+b1 :!
+b1001000110010 <!
+b1001000110010 [
+0o
+1p
+1r
+1s
+
+#600000
+0!
+0&
+0+
+00
+
+#605000
+1!
+1'
+b1 (
+1+
+b1 ;!
+b1 B
+b1 C
+
+#610000
+0!
+0+
+
+#615000
+1!
+1)
+1+
+1:
+b1 >!
+
+#620000
+0!
+0+
+
+#625000
+1!
+0)
+1+
+0:
+1=
+b1 ?!
+1A!
+
+#630000
+0!
+0+
+
+#635000
+1!
+1+
+0=
+0A!
+
+#640000
+0!
+0+
+
+#645000
+1!
+1+
+
+#650000
+0!
+0+
+
+#655000
+1!
+1+
+
+#660000
+0!
+0+
+
+#665000
+1!
+1+
+
+#670000
+0!
+0+
+
+#675000
+1!
+1+
+
+#680000
+0!
+0+
+
+#685000
+1!
+1+
+
+#690000
+0!
+0+
+
+#695000
+1!
+1+
+
+#700000
+0!
+0+
+
+#705000
+1!
+1+
+
+#710000
+0!
+0+
+
+#715000
+1!
+1+
+
+#720000
+0!
+0+
+
+#725000
+1!
+1+
+
+#730000
+0!
+0+
+
+#735000
+1!
+1+
+
+#740000
+0!
+0+
+
+#745000
+1!
+1+
+
+#750000
+0!
+0+
+
+#755000
+1!
+1+
+
+#760000
+0!
+0+
+
+#765000
+1!
+1+
+
+#770000
+0!
+0+
+
+#775000
+1!
+1+
+
+#780000
+0!
+0+
+
+#785000
+1!
+1+
+
+#790000
+0!
+0+
+
+#795000
+1!
+1+
+
+#800000
+0!
+0+
+
+#805000
+1!
+1+
+
+#810000
+0!
+b101 #
+1$
+0+
+b101 -
+1.
+
+#815000
+1!
+1+
+11
+b101 @
+b101 A
+1E!
+b101 F
+1F!
+1G!
+b110 O!
+0f
+b1 g
+b10100000101 l
+
+#820000
+0!
+b0 #
+0$
+0+
+b0 -
+0.
+
+#825000
+1!
+1)
+1+
+01
+b0 @
+b0 A
+0E!
+b0 F
+0F!
+0G!
+1L!
+b100 M!
+b110 N!
+b0 O!
+0\
+0]
+0^
+1b
+b100 d
+1f
+b0 g
+b10100000000 l
+
+#830000
+0!
+0+
+
+#835000
+1!
+0)
+1+
+1;
+1C!
+1E!
+1F!
+1G!
+0L!
+b0 M!
+b0 N!
+1\
+1]
+1^
+0b
+b0 d
+
+#840000
+0!
+0+
+
+#845000
+1!
+1+
+0;
+0C!
+
+#850000
+0!
+0+
+
+#855000
+1!
+1+
+
+#860000
+0!
+0+
+
+#865000
+1!
+1+
+
+#870000
+0!
+0+
+
+#875000
+1!
+1+
+
+#880000
+0!
+0+
+
+#885000
+1!
+1+
+
+#890000
+0!
+0+
+
+#895000
+1!
+1+
+
+#900000
+0!
+0+
+
+#905000
+1!
+1+
+
+#910000
+0!
+0+
+
+#915000
+1!
+1+
+
+#920000
+0!
+0+
+
+#925000
+1!
+1+
+
+#930000
+0!
+0+
+
+#935000
+1!
+1+
+
+#940000
+0!
+0+
+
+#945000
+1!
+1+
+
+#950000
+0!
+0+
+
+#955000
+1!
+1+
+
+#960000
+0!
+0+
+
+#965000
+1!
+1+
+
+#970000
+0!
+0+
+
+#975000
+1!
+1+
+
+#980000
+0!
+0+
+
+#985000
+1!
+1+
+
+#990000
+0!
+0+
+
+#995000
+1!
+1+
+
+#1000000
+0!
+0+

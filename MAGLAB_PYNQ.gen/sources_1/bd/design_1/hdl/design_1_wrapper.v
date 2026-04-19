@@ -2,8 +2,8 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Wed Mar 25 14:22:22 2026
-//Host        : LiamLaptop running 64-bit major release  (build 9200)
+//Date        : Sun Apr 19 11:36:52 2026
+//Host        : DESKTOP-J6HVFTT running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -33,6 +33,10 @@ module design_1_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    Hazard,
+    On_LED,
+    i_rx,
+    o_tx,
     rpio);
   input ADC_CLK;
   inout [14:0]DDR_addr;
@@ -56,6 +60,10 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output Hazard;
+  output On_LED;
+  input i_rx;
+  output o_tx;
   input [15:0]rpio;
 
   wire ADC_CLK;
@@ -80,6 +88,10 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire Hazard;
+  wire On_LED;
+  wire i_rx;
+  wire o_tx;
   wire [15:0]rpio;
 
   design_1 design_1_i
@@ -105,5 +117,9 @@ module design_1_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .Hazard(Hazard),
+        .On_LED(On_LED),
+        .i_rx(i_rx),
+        .o_tx(o_tx),
         .rpio(rpio));
 endmodule

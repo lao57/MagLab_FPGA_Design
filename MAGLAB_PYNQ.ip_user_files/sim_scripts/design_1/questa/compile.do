@@ -182,7 +182,12 @@ vlog -work xil_defaultlib  -incr -mfcu  -sv -L axi_vip_v1_1_22 -L smartconnect_v
 "../../../bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_10/sim/bd_48ac_m00e_0.sv" \
 "../../../bd/design_1/ip/design_1_smartconnect_0_0/sim/design_1_smartconnect_0_0.sv" \
 
+vcom -work xil_defaultlib  -93  \
+"../../../bd/design_1/ip/design_1_util_ds_buf_0_0/util_ds_buf.vhd" \
+"../../../bd/design_1/ip/design_1_util_ds_buf_0_0/sim/design_1_util_ds_buf_0_0.vhd" \
+
 vlog -work xil_defaultlib  -incr -mfcu  "+incdir+../../../../MAGLAB_PYNQ.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../MAGLAB_PYNQ.gen/sources_1/bd/design_1/ipshared/9a25/hdl" "+incdir+../../../../MAGLAB_PYNQ.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MAGLAB_PYNQ.gen/sources_1/bd/design_1/ipshared/00fe/hdl/verilog" "+incdir+../../../../MAGLAB_PYNQ.gen/sources_1/bd/design_1/ipshared/434f/hdl" "+incdir+../../../../../../../../AMDDesignTools/2025.2/Vivado/data/rsb/busdef" "+incdir+C:/AMDDesignTools/2025.2/Vivado/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_uart_main_0_0/sim/design_1_uart_main_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \

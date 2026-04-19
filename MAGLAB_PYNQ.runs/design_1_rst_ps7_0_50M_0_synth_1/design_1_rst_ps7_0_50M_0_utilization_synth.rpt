@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Tue Mar 24 11:05:00 2026
-| Host         : LiamLaptop running 64-bit major release  (build 9200)
+| Date         : Mon Apr 13 15:25:50 2026
+| Host         : DESKTOP-J6HVFTT running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_rst_ps7_0_50M_0_utilization_synth.rpt -pb design_1_rst_ps7_0_50M_0_utilization_synth.pb
 | Design       : design_1_rst_ps7_0_50M_0
 | Device       : xc7z020clg400-1

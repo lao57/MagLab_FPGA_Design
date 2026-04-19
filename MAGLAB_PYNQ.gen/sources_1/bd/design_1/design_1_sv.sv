@@ -98,7 +98,15 @@ module design_1_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   input wire ADC_CLK,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [15:0] rpio
+  input wire [15:0] rpio,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire i_rx,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire o_tx,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire Hazard,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire On_LED
 );
 
   design_1 inst (
@@ -124,7 +132,11 @@ module design_1_sv (
     .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
     .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
     .ADC_CLK(ADC_CLK),
-    .rpio(rpio)
+    .rpio(rpio),
+    .i_rx(i_rx),
+    .o_tx(o_tx),
+    .Hazard(Hazard),
+    .On_LED(On_LED)
   );
 
 endmodule

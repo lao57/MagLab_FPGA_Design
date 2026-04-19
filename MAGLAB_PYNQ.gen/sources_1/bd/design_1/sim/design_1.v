@@ -2,15 +2,15 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Wed Mar 25 14:22:22 2026
-//Host        : LiamLaptop running 64-bit major release  (build 9200)
+//Date        : Sun Apr 19 11:36:52 2026
+//Host        : DESKTOP-J6HVFTT running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (ADC_CLK,
     DDR_addr,
@@ -34,6 +34,10 @@ module design_1
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    Hazard,
+    On_LED,
+    i_rx,
+    o_tx,
     rpio);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.ADC_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.ADC_CLK, CLK_DOMAIN design_1_sysclk, FREQ_HZ 5000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input ADC_CLK;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
@@ -57,8 +61,13 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  output Hazard;
+  output On_LED;
+  input i_rx;
+  output o_tx;
   input [15:0]rpio;
 
+  wire ADC_CLK;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -83,7 +92,11 @@ module design_1
   wire [15:0]FPGA_core_0_m_axis_tdata;
   wire [1:0]FPGA_core_0_m_axis_tkeep;
   wire FPGA_core_0_m_axis_tlast;
-  wire FPGA_core_0_m_axis_tvalid;
+  wire Hazard;
+  wire On_LED;
+  wire [7:0]SoftProc_0_i_tx_byte;
+  wire SoftProc_0_i_tx_send;
+  wire SoftProc_0_m_axis_tvalid;
   wire [9:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
   wire axi_smc_M00_AXI_ARVALID;
@@ -100,10 +113,19 @@ module design_1
   wire [31:0]axi_smc_M00_AXI_WDATA;
   wire axi_smc_M00_AXI_WREADY;
   wire axi_smc_M00_AXI_WVALID;
-  wire [15:0]axis_data_fifo_0_m_axis_tdata;
-  wire [1:0]axis_data_fifo_0_m_axis_tkeep;
-  wire axis_data_fifo_0_m_axis_tlast;
-  wire axis_data_fifo_0_m_axis_tvalid;
+  wire [15:0]axis_broadcaster_0_M00_AXIS_TDATA;
+  wire axis_broadcaster_0_M00_AXIS_TREADY;
+  wire [0:0]axis_broadcaster_0_M00_AXIS_TVALID;
+  wire [31:16]axis_broadcaster_0_M01_AXIS_TDATA;
+  wire [3:2]axis_broadcaster_0_M01_AXIS_TKEEP;
+  wire [1:1]axis_broadcaster_0_M01_AXIS_TLAST;
+  wire axis_broadcaster_0_M01_AXIS_TREADY;
+  wire [1:1]axis_broadcaster_0_M01_AXIS_TVALID;
+  wire [15:0]axis_data_fifo_0_M_AXIS_TDATA;
+  wire [1:0]axis_data_fifo_0_M_AXIS_TKEEP;
+  wire axis_data_fifo_0_M_AXIS_TLAST;
+  wire axis_data_fifo_0_M_AXIS_TREADY;
+  wire axis_data_fifo_0_M_AXIS_TVALID;
   wire axis_data_fifo_0_s_axis_tready;
   wire [31:0]dma_M_AXI_S2MM_AWADDR;
   wire [1:0]dma_M_AXI_S2MM_AWBURST;
@@ -121,7 +143,8 @@ module design_1
   wire dma_M_AXI_S2MM_WREADY;
   wire [7:0]dma_M_AXI_S2MM_WSTRB;
   wire dma_M_AXI_S2MM_WVALID;
-  wire dma_s_axis_s2mm_tready;
+  wire i_rx;
+  wire o_tx;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
   wire [31:0]processing_system7_0_M_AXI_GP0_ARADDR;
@@ -182,17 +205,34 @@ module design_1
   wire smartconnect_0_M00_AXI_WREADY;
   wire [7:0]smartconnect_0_M00_AXI_WSTRB;
   wire smartconnect_0_M00_AXI_WVALID;
+  wire [7:0]uart_main_0_o_rx_byte;
+  wire uart_main_0_o_rx_valid;
+  wire [0:0]util_ds_buf_0_BUFG_O;
   wire [0:0]xlconstant_0_dout;
+  wire [3:0]NLW_axis_broadcaster_0_m_axis_tkeep_UNCONNECTED;
+  wire [1:0]NLW_axis_broadcaster_0_m_axis_tlast_UNCONNECTED;
 
   design_1_FPGA_core_0_0 FPGA_core_0
-       (.ADC_CLK(processing_system7_0_FCLK_CLK0),
+       (.ADC_CLK(util_ds_buf_0_BUFG_O),
         .ADC_IN(rpio),
         .m_axis_tdata(FPGA_core_0_m_axis_tdata),
         .m_axis_tkeep(FPGA_core_0_m_axis_tkeep),
         .m_axis_tlast(FPGA_core_0_m_axis_tlast),
         .m_axis_tready(axis_data_fifo_0_s_axis_tready),
-        .m_axis_tvalid(FPGA_core_0_m_axis_tvalid),
         .resetn(xlconstant_0_dout));
+  design_1_SoftProc_0_0 SoftProc_0
+       (.Hazard(Hazard),
+        .On_LED(On_LED),
+        .clk(processing_system7_0_FCLK_CLK0),
+        .i_tx_byte(SoftProc_0_i_tx_byte),
+        .i_tx_send(SoftProc_0_i_tx_send),
+        .m_axis_tvalid(SoftProc_0_m_axis_tvalid),
+        .o_rx_byte(uart_main_0_o_rx_byte),
+        .o_rx_valid(uart_main_0_o_rx_valid),
+        .rst_n(processing_system7_0_FCLK_RESET0_N),
+        .s_axis_tdata(axis_broadcaster_0_M00_AXIS_TDATA),
+        .s_axis_tready(axis_broadcaster_0_M00_AXIS_TREADY),
+        .s_axis_tvalid(axis_broadcaster_0_M00_AXIS_TVALID));
   design_1_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),
@@ -250,20 +290,33 @@ module design_1
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_50M_peripheral_aresetn));
+  design_1_axis_broadcaster_0_0 axis_broadcaster_0
+       (.aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(rst_ps7_0_50M_peripheral_aresetn),
+        .m_axis_tdata({axis_broadcaster_0_M01_AXIS_TDATA,axis_broadcaster_0_M00_AXIS_TDATA}),
+        .m_axis_tkeep({axis_broadcaster_0_M01_AXIS_TKEEP,NLW_axis_broadcaster_0_m_axis_tkeep_UNCONNECTED[1:0]}),
+        .m_axis_tlast({axis_broadcaster_0_M01_AXIS_TLAST,NLW_axis_broadcaster_0_m_axis_tlast_UNCONNECTED[0]}),
+        .m_axis_tready({axis_broadcaster_0_M01_AXIS_TREADY,axis_broadcaster_0_M00_AXIS_TREADY}),
+        .m_axis_tvalid({axis_broadcaster_0_M01_AXIS_TVALID,axis_broadcaster_0_M00_AXIS_TVALID}),
+        .s_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+        .s_axis_tkeep(axis_data_fifo_0_M_AXIS_TKEEP),
+        .s_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
+        .s_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
+        .s_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
   design_1_axis_data_fifo_0_1 axis_data_fifo_0
        (.m_axis_aclk(processing_system7_0_FCLK_CLK0),
-        .m_axis_tdata(axis_data_fifo_0_m_axis_tdata),
-        .m_axis_tkeep(axis_data_fifo_0_m_axis_tkeep),
-        .m_axis_tlast(axis_data_fifo_0_m_axis_tlast),
-        .m_axis_tready(dma_s_axis_s2mm_tready),
-        .m_axis_tvalid(axis_data_fifo_0_m_axis_tvalid),
-        .s_axis_aclk(processing_system7_0_FCLK_CLK0),
+        .m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
+        .m_axis_tkeep(axis_data_fifo_0_M_AXIS_TKEEP),
+        .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
+        .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
+        .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
+        .s_axis_aclk(util_ds_buf_0_BUFG_O),
         .s_axis_aresetn(xlconstant_0_dout),
         .s_axis_tdata(FPGA_core_0_m_axis_tdata),
         .s_axis_tkeep(FPGA_core_0_m_axis_tkeep),
         .s_axis_tlast(FPGA_core_0_m_axis_tlast),
         .s_axis_tready(axis_data_fifo_0_s_axis_tready),
-        .s_axis_tvalid(FPGA_core_0_m_axis_tvalid));
+        .s_axis_tvalid(SoftProc_0_m_axis_tvalid));
   design_1_axi_dma_0_0 dma
        (.axi_resetn(rst_ps7_0_50M_peripheral_aresetn),
         .m_axi_s2mm_aclk(processing_system7_0_FCLK_CLK0),
@@ -300,11 +353,11 @@ module design_1
         .s_axi_lite_wdata(axi_smc_M00_AXI_WDATA),
         .s_axi_lite_wready(axi_smc_M00_AXI_WREADY),
         .s_axi_lite_wvalid(axi_smc_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(axis_data_fifo_0_m_axis_tdata),
-        .s_axis_s2mm_tkeep(axis_data_fifo_0_m_axis_tkeep),
-        .s_axis_s2mm_tlast(axis_data_fifo_0_m_axis_tlast),
-        .s_axis_s2mm_tready(dma_s_axis_s2mm_tready),
-        .s_axis_s2mm_tvalid(axis_data_fifo_0_m_axis_tvalid));
+        .s_axis_s2mm_tdata(axis_broadcaster_0_M01_AXIS_TDATA),
+        .s_axis_s2mm_tkeep(axis_broadcaster_0_M01_AXIS_TKEEP),
+        .s_axis_s2mm_tlast(axis_broadcaster_0_M01_AXIS_TLAST),
+        .s_axis_s2mm_tready(axis_broadcaster_0_M01_AXIS_TREADY),
+        .s_axis_s2mm_tvalid(axis_broadcaster_0_M01_AXIS_TVALID));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr),
         .DDR_BankAddr(DDR_ba),
@@ -449,6 +502,17 @@ module design_1
         .S00_AXI_wvalid(dma_M_AXI_S2MM_WVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_50M_peripheral_aresetn));
+  design_1_uart_main_0_0 uart_main_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .i_rx(i_rx),
+        .i_tx_byte(SoftProc_0_i_tx_byte),
+        .i_tx_send(SoftProc_0_i_tx_send),
+        .o_rx_byte(uart_main_0_o_rx_byte),
+        .o_rx_valid(uart_main_0_o_rx_valid),
+        .o_tx(o_tx));
+  design_1_util_ds_buf_0_0 util_ds_buf_0
+       (.BUFG_I(ADC_CLK),
+        .BUFG_O(util_ds_buf_0_BUFG_O));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

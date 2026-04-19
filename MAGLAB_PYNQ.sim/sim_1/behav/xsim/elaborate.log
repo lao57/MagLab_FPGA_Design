@@ -1,0 +1,32 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot SoftProc_tb_behav xil_defaultlib.SoftProc_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'en' [C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/sources_1/new/SoftProc.v:195]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'en' [C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/sources_1/new/SoftProc.v:226]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'en' [C:/Code/SeniorDesign/SeniorDesign/MAGLAB_PYNQ/MAGLAB_PYNQ.srcs/sources_1/new/SoftProc.v:234]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FIFO_buff
+Compiling module xil_defaultlib.N_RegFile(N=2)
+Compiling module xil_defaultlib.N_RegFile(N=3)
+Compiling module xil_defaultlib.N_RegFile
+Compiling module xil_defaultlib.reg_file_N(N=16)
+Compiling module xil_defaultlib.reg_file_N(N=2)
+Compiling module xil_defaultlib.mux4x2(N=1)
+Compiling module xil_defaultlib.GLE_Comp
+Compiling module xil_defaultlib.N_RegFile(N=16)
+Compiling module xil_defaultlib.N_RegFile(N=1)
+Compiling module xil_defaultlib.change_detect
+Compiling module xil_defaultlib.mux2x1
+Compiling module xil_defaultlib.SendBack
+Compiling module xil_defaultlib.fsm
+Compiling module xil_defaultlib.SoftProc
+Compiling module xil_defaultlib.SoftProc_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot SoftProc_tb_behav
