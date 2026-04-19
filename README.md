@@ -255,5 +255,5 @@ print(f"Unique values : {len(np.unique(data))}")
 - The `Overlay()` and `allocate()` calls can live in a separate cell above so you don't reload the bitfile on every run
 
 
-
+# Full System Layout
 <img width="1923" height="785" alt="Screenshot 2026-04-19 133142" src="https://github.com/user-attachments/assets/8dd207d0-69c6-4c01-8ca0-51e3659147ab" />
