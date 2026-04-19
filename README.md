@@ -9,9 +9,7 @@ This projects has two main elements:
    --Enable/disable control with confirmed acknowledgment handshaking
 
 # Softcore Processor
-<img width="460" height="399" alt="SoftCoreProgdark" src="https://github.com/user-attachments/assets/b35c18ea-8d19-4bc6-9318-09d91a018f05" />
-# Processor FSM
-<img width="524" height="669" alt="SoftProcFSMfinal" src="https://github.com/user-attachments/assets/22b235f8-6fb8-471f-ab45-3f17e145bf59" />
+<img width="461" height="400" alt="SoftCoreProgdark" src="https://github.com/user-attachments/assets/b35c18ea-8d19-4bc6-9318-09d91a018f05" /><img width="313" height="400" alt="SoftProcFSMfinal" src="https://github.com/user-attachments/assets/22b235f8-6fb8-471f-ab45-3f17e145bf59" />
 
 # Custom ISA Reference
 
